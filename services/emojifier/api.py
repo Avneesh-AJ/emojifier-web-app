@@ -55,4 +55,4 @@ try:
     if __name__ =="__main__":
         print(predict("i am  sad"))
 except:
-    pass
+    print("Oops something is not right")

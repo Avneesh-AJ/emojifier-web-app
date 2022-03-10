@@ -51,8 +51,9 @@ try:
         print(' '.join(X[0]))
         return (emoji.emojize(emoji_dictionary[str(p[0])]))
 
-
-    if __name__ =="__main__":
-        print(predict("i am  sad"))
 except:
     print("Oops something is not right")
+    
+if __name__ =="__main__":
+    print(predict("i am  sad"))
+

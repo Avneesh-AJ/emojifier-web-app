@@ -28,7 +28,7 @@ with open('services/emojifier/glove.6B.50d.txt',encoding='utf-8') as f:
         except:
             f.__next__()
             
-        embeddings[word] = (coeffs)
+        #embeddings[word] = (coeffs)
         #print(type(coeffs))
         #print(coeffs)
         #print(embeddings[word])

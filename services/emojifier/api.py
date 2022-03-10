@@ -19,13 +19,18 @@ model.load_weights("services/emojifier/model.h5")
 embeddings = {}
 with open('services/emojifier/glove.6B.50d.txt',encoding='utf-8') as f:
     for line in f:
-        values = line.split()
-        word = values[0]
-        coeffs = np.asarray(values[1:])
-        #coeffs = np.asarray(values[1:],dtype='float32')
+        try:
+            values = line.split()
+            word = values[0]
+            coeffs = np.asarray(values[1:])
+            #coeffs = np.asarray(values[1:],dtype='float32')
+            #print(coeffs)
+        except:
+            f.__next__()
         
-        embeddings[word] = float(coeffs)
-
+        embeddings[word] = (coeffs)
+    #print(type(coeffs))
+    #print(coeffs)
 def getOutputEmbeddings(X):
     
     embedding_matrix_output = np.zeros((X.shape[0],10,50))

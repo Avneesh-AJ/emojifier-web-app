@@ -1,9 +1,8 @@
+import emoji
+import pandas as pd
+import numpy as np
+from keras.models import model_from_json
 try:
-    import emoji
-    import pandas as pd
-    import numpy as np
-    from keras.models import model_from_json
-
     emoji_dictionary = {"0": "\u2764\uFE0F",    # :heart: prints a black instead of red heart depending on the font
                             "1": ":baseball:",
                             "2": ":beaming_face_with_smiling_eyes:",
@@ -41,7 +40,7 @@ try:
             for jx in range(len(X[ix])):
                 embedding_matrix_output[ix][jx] = embeddings[X[ix][jx].lower()]
                     
-            return embedding_matrix_output
+        return embedding_matrix_output
 
     def predict(x):
         X = pd.Series([x])
@@ -54,5 +53,5 @@ except KeyError:
     print("this is error")
 
 if __name__ =="__main__":
-    print(predict("i am  sad"))
+    print(predict("food"))
 

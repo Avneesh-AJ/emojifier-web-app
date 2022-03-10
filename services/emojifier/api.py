@@ -54,5 +54,5 @@ except KeyError:
     print("this is error")
 
 if __name__ =="__main__":
-    print(predict("i am  sad"))
+    print(predict("food"))
 

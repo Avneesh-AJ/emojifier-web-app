@@ -21,7 +21,8 @@ with open('services/emojifier/glove.6B.50d.txt',encoding='utf-8') as f:
     for line in f:
         values = line.split()
         word = values[0]
-        coeffs = np.asarray(values[1:],dtype='float32')
+        coeffs = np.asarray(values[1:])
+        #coeffs = np.asarray(values[1:],dtype='float32')
         
         embeddings[word] = coeffs
 

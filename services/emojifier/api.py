@@ -22,8 +22,8 @@ try:
             try:
                 values = line.split()
                 word = values[0]
-                coeffs = np.asarray(values[1:])
-                #coeffs = np.asarray(values[1:],dtype='float32')
+                #coeffs = np.asarray(values[1:])
+                coeffs = np.asarray(values[1:],dtype='float32')
                 #print(coeffs)
             except:
                 f.__next__()
@@ -53,7 +53,7 @@ try:
 
 except:
     print("Oops something is not right")
-    
+
 if __name__ =="__main__":
     print(predict("i am  sad"))
 

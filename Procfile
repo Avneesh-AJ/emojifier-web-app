@@ -1,1 +1,1 @@
-web: gunicorn Emojified.wsgi
+web: gunicorn emojified.wsgi
